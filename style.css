@@ -1399,3 +1399,51 @@ color: var(--rose-gold) !important;
     transition: var(--transition);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
 }
+.map-frame-container {
+    position: relative;
+    width: 100%;
+}
+
+.map-frame {
+    border-radius: 30px;
+    overflow: hidden;
+    border: 2px solid rgba(74, 93, 78, 0.2);
+    filter: grayscale(0.2); 
+    transition: 0.5s;
+}
+
+.map-frame:hover {
+    filter: grayscale(0);
+}
+.quick-directions-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: var(--rose-gold);
+    color: white !important;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    z-index: 10;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.quick-directions-btn:hover {
+    transform: scale(1.05);
+    background: var(--rose-deep);
+}
+
+@media (max-width: 768px) {
+    .quick-directions-btn {
+        bottom: 10px;
+        left: 10px;
+        padding: 10px 15px;
+        font-size: 0.8rem;
+    }
+}
